@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/ball.png" type="image/x-icon">
+    <title>Messi Free kick</title>
+    <style>
+        .bg {
+            position: absolute;
+        }
+
+        .mes {
+            width: 300px;
+            height: 400px;
+            position: relative;
+            left: 400px;
+            top: 90px;
+            z-index: 1;
+        }
+
+        .ball {
+            width: 30px;
+            height: 30px;
+            /* border-radius: 25px;
+            background-color: red; */
+            position: relative;
+            /*position change korar jonno ar nicher line e bola hoise kon dike jabe and koto tuk*/
+            left: 80px;
+            transition: width 1s, height 2s, transform 2s ease-out 0.1s;
+        }
+
+        .gk {
+            width: 150px;
+            height: 100px;
+            position: relative;
+            top: -100px;
+            right: 150px;
+            transition: transform 1.2s ease-in-out 0.5s;
+        }
+
+        .wall {
+            width: 200px;
+            height: 200px;
+            position: relative;
+            top: -20px;
+            right: 150px;
+            transition: transform .2s ease 0.50s;
+        }
+
+
+        .mes {
+            transition: transform 0.2s ease-in;
+        }
+
+        .field:hover .ball {
+            width: 20px;
+            height: 20px;
+            transform: translate(-140px, -165px);
+            /*ekhane 950 x axis borabor jabe ar -250 y axis borabor jabe jar jonno ball uporer dike move korbe*/
+
+        }
+
+        .field {
+            border: 1px solid red;
+        }
+
+        .field:hover .gk {
+            transform: translate(80px, 30px) rotate(80deg);
+            ;
+
+        }
+
+        .field:hover .wall {
+            transform: translate(-10px, -10px) rotate(-20deg);
+            transform-origin: center;
+        }
+
+        .field:hover .mes {
+            /*evhabe use kora hoise jar karone ekn mouse border e niye gele e bat move korbe age bat e nile move korto*/
+            transform: rotate(20deg);
+            transform-origin: top left;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Free kick</h1>
+    <div class="field">
+        <img class="bg" src="images/bg.png" alt="">
+        <img class="mes" src="images/m1.svg" alt="">
+        <!-- <div class="ball"></div> -->
+        <img class="ball" src="images/ball.png" alt="">
+        <img class="gk" src="images/gk3.svg" alt="">
+        <img class="wall" src="images/wall.svg" alt="">
+    </div>
+
+</body>
+
+</html>
